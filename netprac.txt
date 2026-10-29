@@ -24,6 +24,65 @@ Console.WriteLine("The number is odd.");
 } 
 } 
 # =====================================================================
+#console fibonacci
+# =====================================================================
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n, a = 0, b = 1, c;
+
+        Console.Write("Enter number of terms: ");
+        n = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 1; i <= n; i++)
+        {
+            Console.Write(a + " ");
+            c = a + b;
+            a = b;
+            b = c;
+        }
+
+        Console.ReadLine();
+    }
+}
+# =====================================================================
+#console palantrome
+# =====================================================================
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n, temp, rem, rev = 0;
+
+        Console.Write("Enter a number: ");
+        n = Convert.ToInt32(Console.ReadLine());
+
+        temp = n;
+
+        while (temp > 0)
+        {
+            rem = temp % 10;
+            rev = rev * 10 + rem;
+            temp = temp / 10;
+        }
+
+        if (n == rev)
+            Console.WriteLine("Palindrome Number");
+        else
+            Console.WriteLine("Not a Palindrome Number");
+
+        Console.ReadLine();
+    }
+}
+
+# =====================================================================
 #console temperature converter
 # =====================================================================
 using System; 
